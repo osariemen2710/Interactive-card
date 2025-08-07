@@ -12,7 +12,7 @@ An interactive and responsive credit card form that updates in real-time and val
 
 ## 🖼️ Demo
 
-images/screenshots/image.png  
+![images/screenshots/image.png](https://interactive-card-topaz.vercel.app/images/screenshots/image.png)  
 
 
 ## 📦 Technologies Used
