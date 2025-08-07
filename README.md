@@ -12,7 +12,7 @@ An interactive and responsive credit card form that updates in real-time and val
 
 ## 🖼️ Demo
 
-![Screenshot of the credit card form]images/image.png  
+images/screenshots/image.png  
 
 
 ## 📦 Technologies Used
@@ -28,7 +28,7 @@ To run this project locally:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/interactive-card-form.git
+   git clone https://github.com/osariemen2710/Interactive-card
 
 ✅ Form Validation Rules
 Cardholder Name: Cannot be empty
