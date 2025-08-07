@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="left-section">
+            <div class="card">
+                <div class="card-chips">
+                    <div class="chip active"></div>
+                    <div class="chip"></div>
+                </div>
+                <div class="card-number" id="cardNumber">0000 0000 0000 0000</div>
+                <div class="card-bottom">
+                    <div class="cardholder-name" id="cardholderName">JANE APPLESEED</div>
+                    <div class="expiry" id="cardExpiry">00/00</div>
+                </div>
+            </div>
+            <div class='phone'>
+              <div class="phone-full"></div>
+            <div class="phone-mockup">    
+                <div class="phone-header" id="cardCVC">000</div>
+                <div class="phone-content">
+                    <div class="phone-line"></div>
+                    <div class="phone-line"></div>
+                    <div class="phone-line"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="right-section">
+            <form id="cardForm">
+                <div class="form-group">
+                    <label class="form-label" for="cardholderNameInput">Cardholder Name</label>
+                    <input type="text" id="cardholderNameInput" class="form-input" placeholder="e.g. Jane Appleseed" maxlength="50">
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="cardNumberInput">Card Number</label>
+                    <input type="text" id="cardNumberInput" class="form-input" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Exp. Date (MM/YY)</label>
+                        <div style="display: flex; gap: 10px;">
+                            <input type="text" id="expMonth" class="form-input" placeholder="MM" maxlength="2" style="flex: 1;">
+                            <input type="text" id="expYear" class="form-input" placeholder="YY" maxlength="2" style="flex: 1;">    
+                        </div>
+                        <small class="error-message"></small>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="cvc">CVC</label>
+                        <input type="text" id="cvc" class="form-input" placeholder="e.g. 123" maxlength="3">
+                        <small class="error-message"></small>
+                    </div>
+                    
+                </div>
+
+                <button type="submit" class="submit-btn">Confirm</button>
+            </form>
+            <div class="thank-you hidden" id="thankYouMessage">
+  <div class="thank-you-icon">✔</div>
+  <h2>THANK YOU!</h2>
+  <p>We've added your card details</p>
+  <button id="continueBtn">Continue</button>
+</div>
+        </div>
+    </div>
+    <footer class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Aibueku Osariemen</a>.
+    </footer>
+<script src="script.js"></script>
+    
+</body>
+</html>

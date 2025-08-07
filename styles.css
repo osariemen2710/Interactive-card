@@ -1,0 +1,402 @@
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 900px;
+            width: 100%;
+            min-height: 500px;
+            
+        }
+        .attribution {
+            text-align: center;
+            margin-top: 40px;
+            color: #888;
+            font-size: 14px;
+        }
+
+        .left-section {    
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(160deg, #752fe6, #1a063b);
+    flex-basis: 30%;
+    border-radius: 5px;
+    position: relative; 
+        }
+
+        .card {
+            width: 300px;
+            height: 180px;
+            background:  linear-gradient(135deg,
+            #5f2cfa 0%,    
+            #8a49ff 25%,   
+            #d26bed 50%,   
+            #667eea 75%,  
+            #764ba2 100%   
+    );
+  filter: contrast(1.1) saturate(1.2);
+  mix-blend-mode: normal;
+            border-radius: 15px;
+            padding: 25px;
+            color: white;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+            position: absolute;
+            right: -100px;
+            top: 15%;
+            transform: translateY(-10%);
+            z-index: 10;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-chips {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .chip {
+            width: 12px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .chip.active {
+            background: white;
+             width: 18px;
+            height: 18px;
+        }
+
+        .card-number {
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .card-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cardholder-name {
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .expiry {
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .phone {
+  width: 300px;
+  height: 180px;
+  background: rgb(151, 149, 149);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  position: absolute;
+  right: -150px;
+  top: 74%;
+  transform: translateY(-50%) scale(1);
+  transition: transform 0.35s cubic-bezier(.3,.1,.15,1), box-shadow 0.35s ease;
+  z-index: 10;
+  will-change: transform;
+}
+
+.phone:hover {
+  transform: translateY(-53%) scale(1.015);
+  box-shadow: 0 20px 40px -5px rgba(0,0,0,0.25);
+}
+
+
+        .phone-mockup {
+            padding: 28px;
+            padding-top:5px;
+        }
+        .phone-full {
+            background: black;
+            height: 34px;
+            padding: 2px;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        .phone-header {
+            background: rgba(255, 255, 255, 0.2);
+            height: 20px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            font-size: 12px;
+            padding-right: 10px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .phone-content {
+            background: rgba(255, 255, 255, 0.1);
+            flex: 1;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            padding: 8px;
+            gap: 4px;
+             margin-top: 22px;
+             align-items: center;
+        }
+
+        .phone-line {
+            background: rgba(255, 255, 255, 0.3);
+            height: 3px;
+            border-radius: 2px;
+           
+        }
+
+        .phone-line:nth-child(1) { width: 60%; }
+        .phone-line:nth-child(2) { width: 80%; }
+        .phone-line:nth-child(3) { width: 40%; }
+
+        .right-section {
+  max-width: 450px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 80px;
+  padding-top: 80px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 12px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #666;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            font-size: 12px;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #667eea;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-input::placeholder {
+            color: #adb5bd;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 12px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+       .error-message {
+       color: red;
+       font-size: 11px;
+       margin-top: 4px;
+       display: none;
+      }
+
+       .form-input.error {
+        border-color: red;
+        background-color: #ffe6e6;
+      }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+        .thank-you {
+  text-align: center;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.thank-you-icon {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  font-size: 32px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.thank-you h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+.thank-you p {
+  color: #888;
+  margin-bottom: 30px;
+}
+
+.thank-you button {
+  padding: 12px 24px;
+  background-color: #2d033b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.thank-you button:hover {
+  background-color: #4b0d5f;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+@media (max-width: 768px) {
+  body {
+    padding: 5px;
+  }
+  .container {
+    flex-direction: column;
+    max-width: 100%;
+    min-height: unset;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+     gap: 40px;
+  }
+  .left-section {
+    flex-basis: unset;
+    width: 100%;
+    padding: 20px 10px;
+    border-radius: 0;
+    position: static;
+    min-height: unset;
+  }
+  .card {
+    width: 280px;
+    height: 160px;
+    position: static;
+    margin: 0 auto 20px auto;
+    right: unset;
+    top: unset;
+    transform: none;
+  }
+  .phone {
+    width: 280px;
+    height: 160px;
+    position: static;
+    margin: 0 auto 20px auto;
+    right: unset;
+    top: unset;
+    transform: none;
+  }
+  .right-section {
+    max-width: 350px;
+    padding: 20px 10px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+  .form-group {
+    margin-bottom: 18px;
+  }
+ 
+  .submit-btn {
+    padding: 12px;
+    font-size: 14px;
+  }
+  .attribution {
+    font-size: 12px;
+    margin-top: 24px;
+  }
+}
